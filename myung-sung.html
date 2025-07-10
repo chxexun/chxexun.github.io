@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>명성</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Pretendard', sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* 상단 네비게이션 */
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 40px;
+      background-color: white;
+      border-bottom: 1px solid #ccc;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #1368BD;
+    }
+    .category-buttons a {
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 20px;
+      background-color: #e8f0fa;
+      color: #1368BD;
+      font-weight: bold;
+      margin-right: 12px;
+    }
+    .category-buttons a.active { background-color: #1368BD; color: white; }
+    .about { color: #1368BD; font-weight: bold; cursor: pointer; }
+
+    /* 탭 메뉴 */
+    .restaurant-tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+    .restaurant-tabs a {
+      padding: 12px 16px;
+      text-decoration: none;
+      font-weight: 500;
+      border: 1px solid #ccc;
+      border-bottom: none;
+      background: #fff;
+      color: #333;
+      margin-right: 4px;
+    }
+    .restaurant-tabs a.active {
+      background-color: black;
+      color: white;
+      font-weight: bold;
+    }
+
+    /* 바로 가기 카드 */
+    .menu-container {
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+      flex: 1;
+    }
+    .menu-card {
+      width: 196px;
+      height: 196px;
+      flex-shrink: 0;
+      border: 1px solid #1368BD;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #FCFDFF;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .menu-card:hover { transform: translateY(-4px); }
+    .menu-card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+    .menu-info {
+      padding: 12px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .menu-name {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 6px;
+      color: #1368BD;
+    }
+    .menu-price {
+      font-size: 14px;
+      color: #333;
+    }
+
+    /* 메뉴 리스트 영역 */
+    .menu-list {
+      padding: 0 40px 40px;
+    }
+    .menu-list h2 {
+      margin-bottom: 12px;
+      color: #1368BD;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 6px;
+    }
+    .menu-list ul {
+      list-style: disc inside;
+      color: #333;
+      margin-left: 24px;
+    }
+
+    /* 푸터 */
+    .footer {
+      background-color: #f1f3f5;
+      padding: 30px 40px;
+      font-size: 14px;
+      margin-top: auto;
+    }
+    .footer .logo {
+      font-size: 22px;
+      color: #1368BD;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+    .footer .info,
+    .footer .team {
+      color: #1368BD;
+      text-align: left;
+      font-size: 13px;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 상단 -->
+  <div class="top-nav">
+    <div class="logo">handong eats</div>
+    <div class="category-buttons">
+      <a href="restaurant.html" class="active"># 식당</a>
+      <a href="cafe.html"># 카페</a>
+      <a href="convenience.html"># 매점 · 편의점</a>
+    </div>
+    <div class="about">ABOUT ▼</div>
+  </div>
+
+  <!-- 식당 탭 -->
+  <div class="restaurant-tabs">
+    <a href="student.html">학생식당</a>
+    <a href="moms-kitchen.html">맘스키친</a>
+    <a href="handong-lounge.html">라운지</a>
+    <a href="grace.html">그레이스 더 테이블</a>
+    <a href="myung-sung.html" class="active">명성</a>
+    <a href="burger-king.html">버거킹</a>
+    <a href="salady.html">샐러디</a>
+  </div>
+
+  <!-- 네이버 예약 카드 -->
+  <div class="menu-container">
+    <a href="https://naver.me/GkUb8heb" target="_blank" class="menu-card">
+      <img src="images/myungseong.jpg" alt="명성">
+      <div class="menu-info">
+        <div class="menu-name">명성 예약</div>
+        <div class="menu-price">네이버 바로가기 →</div>
+      </div>
+    </a>
+  </div>
+
+  <!-- 메뉴 카드 영역 -->
+<div class="menu-container" style="flex-wrap: wrap; gap: 24px; padding-top: 0;">
+  <!-- 떡볶이류 -->
+  <div class="menu-card">
+    <img src="images/명성/tteokbokki.jpg" alt="갓 만든 떡볶이">
+    <div class="menu-info">
+      <div class="menu-name">갓 만든 떡볶이</div>
+      <div class="menu-price">10,900원</div>
+    </div>
+  </div>
+
+  <div class="menu-card">
+    <img src="images/명성/rose-tteokbokki.jpg" alt="갓 만든 로제떡볶이">
+    <div class="menu-info">
+      <div class="menu-name">갓 만든 로제떡볶이</div>
+      <div class="menu-price">12,900원</div>
+    </div>
+  </div>
+
+  <div class="menu-card">
+    <img src="images/명성/mara-tteokbokki.jpg" alt="갓 만든 마라떡볶이">
+    <div class="menu-info">
+      <div class="menu-name">갓 만든 마라떡볶이</div>
+      <div class="menu-price">12,900원</div>
+    </div>
+  </div>
+
+  <div class="menu-card">
+    <img src="images/명성/mara-rose.jpg" alt="갓 만든 마라로제떡볶이">
+    <div class="menu-info">
+      <div class="menu-name">갓 만든 마라로제떡볶이</div>
+      <div class="menu-price">12,900원</div>
+    </div>
+  </div>
+
+  <!-- 덮밥류 -->
+  <div class="menu-card">
+    <img src="images/명성/jeyuk.jpg" alt="제육덮밥">
+    <div class="menu-info">
+      <div class="menu-name">제육덮밥</div>
+      <div class="menu-price">6,500원</div>
+    </div>
+  </div>
+
+  <div class="menu-card">
+    <img src="images/명성/chicken-mayo.jpg" alt="치킨마요덮밥">
+    <div class="menu-info">
+      <div class="menu-name">치킨마요덮밥</div>
+      <div class="menu-price">6,500원</div>
+    </div>
+  </div>
+
+  <div class="menu-card">
+    <img src="images/명성/oyako.jpg" alt="오야코커리">
+    <div class="menu-info">
+      <div class="menu-name">오야코커리</div>
+      <div class="menu-price">6,500원</div>
+    </div>
+  </div>
+
+  <div class="menu-card">
+    <img src="images/명성/tuna-mayo.jpg" alt="참치마요덮밥">
+    <div class="menu-info">
+      <div class="menu-name">참치마요덮밥</div>
+      <div class="menu-price">5,900원</div>
+    </div>
+  </div>
+
+  <!-- 튀김류 -->
+  <div class="menu-card">
+    <img src="images/명성/garlic-fries.jpg" alt="버터갈릭 감자튀김">
+    <div class="menu-info">
+      <div class="menu-name">버터갈릭 감자튀김</div>
+      <div class="menu-price">4,500원</div>
+    </div>
+  </div>
+
+  <div class="menu-card">
+    <img src="images/명성/takoyaki.jpg" alt="타코야키">
+    <div class="menu-info">
+      <div class="menu-name">타코야키</div>
+      <div class="menu-price">4,000원</div>
+    </div>
+  </div>
+
+  <div class="menu-card">
+    <img src="images/명성/gimmari.jpg" alt="김말이튀김">
+    <div class="menu-info">
+      <div class="menu-name">김말이튀김</div>
+      <div class="menu-price">2,000원</div>
+    </div>
+  </div>
+
+  <div class="menu-card">
+    <img src="images/명성/squid.jpg" alt="오징어튀김">
+    <div class="menu-info">
+      <div class="menu-name">오징어튀김</div>
+      <div class="menu-price">2,000원</div>
+    </div>
+  </div>
+
+  <div class="menu-card">
+    <img src="images/명성/veggie.jpg" alt="야채튀김">
+    <div class="menu-info">
+      <div class="menu-name">야채튀김</div>
+      <div class="menu-price">2,000원</div>
+    </div>
+  </div>
+
+  <div class="menu-card">
+    <img src="images/명성/shrimp.jpg" alt="새우튀김">
+    <div class="menu-info">
+      <div class="menu-name">새우튀김</div>
+      <div class="menu-price">2,000원</div>
+    </div>
+  </div>
+
+  <div class="menu-card">
+    <img src="images/명성/sweetpotato.jpg" alt="고구마튀김">
+    <div class="menu-info">
+      <div class="menu-name">고구마튀김</div>
+      <div class="menu-price">2,000원</div>
+    </div>
+  </div>
+
+  <div class="menu-card">
+    <img src="images/명성/fried-dumpling.jpg" alt="튀김만두">
+    <div class="menu-info">
+      <div class="menu-name">튀김만두</div>
+      <div class="menu-price">2,000원</div>
+    </div>
+  </div>
+
+  <div class="menu-card">
+    <img src="images/명성/hashbrown.jpg" alt="해쉬브라운">
+    <div class="menu-info">
+      <div class="menu-name">해쉬브라운</div>
+      <div class="menu-price">1,000원</div>
+    </div>
+  </div>
+
+  <!-- 음료 -->
+  <div class="menu-card">
+    <img src="images/명성/can-drink.jpg" alt="캔음료">
+    <div class="menu-info">
+      <div class="menu-name">캔음료</div>
+      <div class="menu-price">2,000원</div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- 푸터 -->
+  <div class="footer">
+    <div class="logo">handong eats</div>
+    <div class="info">2025‑Summer 프론트엔드 입문</div>
+    <div class="team">
+      22300038 구본서 · 22400020 고윤 · 22001073 하엘림 · 22400190 김채은 · 22101034 박주현
+    </div>
+  </div>
+</body>
+</html>

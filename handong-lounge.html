@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>한동라운지 메뉴</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Pretendard', sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* 상단 네비게이션 */
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 40px;
+      background-color: white;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #1368BD;
+    }
+
+    .category-buttons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .category-buttons a {
+      text-decoration: none;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 20px;
+      background-color: #e8f0fa;
+      color: #1368BD;
+      font-weight: bold;
+    }
+
+    .category-buttons a.active {
+      background-color: #1368BD;
+      color: white;
+    }
+
+    .about {
+      color: #1368BD;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* 탭 메뉴 (식당 리스트) */
+    .restaurant-tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .restaurant-tabs a {
+      padding: 12px 16px;
+      text-decoration: none;
+      font-weight: 500;
+      border: 1px solid #ccc;
+      border-bottom: none;
+      background-color: #fff;
+      color: #333;
+      text-align: center;
+    }
+
+    .restaurant-tabs a.active {
+      background-color: black;
+      color: white;
+      font-weight: bold;
+    }
+
+    /* 메뉴 카드 그리드 */
+    .menu-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      padding: 40px;
+      flex: 1;
+    }
+
+    .menu-card {
+      width: 196px;
+      height: 196px;
+      flex-shrink: 0;
+      border: 1px solid #1368BD;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #FCFDFF;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+
+    .menu-info {
+      padding: 12px;
+    }
+
+    .menu-name {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .menu-price {
+      font-size: 14px;
+      color: #333;
+    }
+
+    /* 하단 푸터 */
+    .footer {
+      background-color: #f1f3f5;
+      padding: 30px 40px;
+      font-size: 14px;
+      color: #555;
+      margin-top: auto;
+    }
+
+    .footer .logo {
+      font-size: 22px;
+      color: #1368BD;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    .footer .info,
+    .footer .team {
+      color: #1368BD;
+      text-align: left;
+      font-size: 13px;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 상단 네비게이션 -->
+  <div class="top-nav">
+    <div class="logo">handong eats</div>
+    <div class="category-buttons">
+      <a href="restaurant.html" class="active"># 식당</a>
+      <a href="cafe.html"># 카페</a>
+      <a href="convenience.html"># 매점 · 편의점</a>
+    </div>
+    <div class="about">ABOUT ▼</div>
+  </div>
+
+  <!-- 식당 탭 -->
+  <div class="restaurant-tabs">
+    <a href="student.html">학생식당</a>
+    <a href="moms-kitchen.html">맘스키친</a>
+    <a href="handong-lounge.html" class="active">라운지</a>
+    <a href="grace.html">그레이스 더 테이블</a>
+    <a href="myung-sung.html">명성</a>
+    <a href="burger-king.html">버거킹</a>
+    <a href="salady.html">샐러디</a>
+  </div>
+
+  <!-- 메뉴 카드 -->
+  <div class="menu-container">
+
+    <div class="menu-card">
+      <img src="images/라운지_짜장면.png" alt="짜장면">
+      <div class="menu-info">
+        <div class="menu-name">짜장면</div>
+        <div class="menu-price">5,000원</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/라운지_짬뽕.png" alt="짬뽕">
+      <div class="menu-info">
+        <div class="menu-name">짬뽕</div>
+        <div class="menu-price">5,500원</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/라운지_탕수육.png" alt="탕수육">
+      <div class="menu-info">
+        <div class="menu-name">탕수육</div>
+        <div class="menu-price">6,000원</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/라운지_부대찌개.png" alt="부대찌개">
+      <div class="menu-info">
+        <div class="menu-name">부대찌개</div>
+        <div class="menu-price">6,000원</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/라운지_돼지국밥.png" alt="돼지국밥">
+      <div class="menu-info">
+        <div class="menu-name">돼지국밥</div>
+        <div class="menu-price">6,000원</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="images/라운지_순두부찌개.png" alt="순두부찌개">
+      <div class="menu-info">
+        <div class="menu-name">순두부찌개</div>
+        <div class="menu-price">6,000원</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 하단 푸터 -->
+  <div class="footer">
+    <div class="logo">handong eats</div>
+    <div class="info">2025-Summer 프론트엔드 입문</div>
+    <div class="team">
+       22300038 구본서 · 22400020 고윤 · 22001073 하엘림 · 22400190 김채은 · 22101034 박주현
+    </div>
+  </div>
+
+</body>
+</html>
